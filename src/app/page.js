@@ -50,7 +50,7 @@ export default function HomePage() {
                 className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 cursor-pointer hover:to-red-600"
               >
                 <ShoppingCart className="mr-2 h-5 w-5" />
-                I'm a Vendor
+                I&apos;m a Vendor
               </Button>
             </Link>
             <Link href="/register?type=supplier">
@@ -60,7 +60,7 @@ export default function HomePage() {
                 className="border-orange-300 cursor-pointer text-orange-600 hover:bg-orange-50 bg-transparent"
               >
                 <Users className="mr-2 h-5 w-5" />
-                I'm a Supplier
+                I&apos;m a Supplier
               </Button>
             </Link>
           </div>
@@ -101,7 +101,7 @@ export default function HomePage() {
                   <div className="w-2 h-2 bg-orange-500 rounded-full mt-2"></div>
                   <div>
                     <h4 className="font-semibold">AI Chatbot Assistant</h4>
-                    <p className="text-sm text-gray-600">Ask "Where can I get cheapest potatoes near me?"</p>
+                    <p className="text-sm text-gray-600">Ask &ldquo;Where can I get cheapest potatoes near me?&rdquo;</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
@@ -128,7 +128,7 @@ export default function HomePage() {
                   <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
                   <div>
                     <h4 className="font-semibold">Daily Inventory Upload</h4>
-                    <p className="text-sm text-gray-600">List what you're selling today with prices</p>
+                    <p className="text-sm text-gray-600">List what you&apos;re selling today with prices</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
@@ -193,7 +193,7 @@ export default function HomePage() {
             and distance.
           </p>
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 max-w-md mx-auto">
-            <p className="text-lg font-medium mb-2">"Where can I get cheapest potatoes near me?"</p>
+            <p className="text-lg font-medium mb-2">&ldquo;Where can I get cheapest potatoes near me?&rdquo;</p>
             <p className="text-sm opacity-90">Get instant recommendations with prices and locations</p>
           </div>
         </div>
