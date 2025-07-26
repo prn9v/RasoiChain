@@ -1,243 +1,223 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { ShoppingCart, Users, MessageCircle, MapPin, Star, Smartphone } from 'lucide-react'
-import Link from "next/link"
+"use client";
+import Link from "next/link";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, MapPin, Users } from "lucide-react";
+import image from "../../public/image1.jpg";
 
-export default function HomePage() {
+export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-red-50">
+    <div className="min-h-screen">
       {/* Header */}
-      <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">R</span>
+      <header className="bg-white/95 backdrop-blur-sm border-b sticky top-0 z-50">
+        <div className="container mx-auto px-6 py-4">
+          <div className="flex items-center justify-between">
+            {/* Logo */}
+            <div className="flex items-center space-x-3">
+              <div className="w-10 h-10 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center">
+                <span className="text-white font-bold text-lg">R</span>
+              </div>
+              <span className="text-2xl font-bold text-gray-900">
+                RasoiChain
+              </span>
             </div>
-            <h1 className="text-2xl font-bold text-gray-900">RasoiChain 👤</h1>
-          </div>
-          <div className="flex space-x-2">
-            <Link href="/login">
-              <Button className=" cursor-pointer" variant="outline">Login</Button>
-            </Link>
-            <Link href="/register">
-              <Button className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600  cursor-pointer hover:to-red-600">
-                Get Started
-              </Button>
-            </Link>
+
+            {/* Navigation */}
+            <nav className="hidden md:flex items-center space-x-8">
+              <a
+                href="#features"
+                className="text-gray-600 hover:text-gray-900 font-medium"
+              >
+                Features
+              </a>
+              <a
+                href="#how-it-works"
+                className="text-gray-600 hover:text-gray-900 font-medium"
+              >
+                How it Works
+              </a>
+              <a
+                href="#about"
+                className="text-gray-600 hover:text-gray-900 font-medium"
+              >
+                About
+              </a>
+            </nav>
+
+            {/* Auth Buttons */}
+            <div className="flex items-center space-x-3">
+              <Link href="/login">
+                <Button
+                  variant="outline"
+                  className="border-orange-300 text-orange-600 hover:bg-orange-50 bg-transparent"
+                >
+                  Login
+                </Button>
+              </Link>
+              <Link href="/register">
+                <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700">
+                  Get Started
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto text-center">
-          <Badge className="mb-4 bg-orange-100 text-orange-800 hover:bg-orange-100">
-            Connecting Street Food Vendors & Suppliers
-          </Badge>
-          <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            Your Local Food Supply
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500"> Chain</span>
-          </h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Smart marketplace for street food vendors to find the best suppliers for raw materials. Get the best prices,
-            nearest locations, and AI-powered recommendations.
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src={image}
+            alt="Indian spice market"
+            fill
+            className="w-full h-full object-cover"
+            priority
+            sizes="100vw"
+            style={{ objectFit: "cover" }}
+          />
+          <div className="absolute inset-0 bg-black/60"></div>
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 text-center text-white px-6 max-w-6xl mx-auto">
+          {/* Main Headline */}
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
+            Connect{" "}
+            <span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 bg-clip-text text-transparent">
+              Street Food
+            </span>
+            <br />
+            Vendors with Trusted{" "}
+            <span className="bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 bg-clip-text text-transparent">
+              Suppliers
+            </span>
+          </h1>
+
+          {/* Subtitle */}
+          <p className="text-xl md:text-2xl text-gray-200 mb-12 max-w-4xl mx-auto leading-relaxed">
+            RasoiChain revolutionizes how street food vendors source raw
+            materials.
+            <br />
+            Get the best prices, quality ingredients, and reliable suppliers
+            with AI-powered recommendations.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+          {/* Statistics */}
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 mb-12">
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-yellow-400 mb-2">
+                10K+
+              </div>
+              <div className="text-gray-300 text-lg">Vendors</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-red-400 mb-2">
+                5K+
+              </div>
+              <div className="text-gray-300 text-lg">Suppliers</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-orange-400 mb-2">
+                ₹2Cr+
+              </div>
+              <div className="text-gray-300 text-lg">Savings</div>
+            </div>
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Link href="/register?type=vendor">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 cursor-pointer hover:to-red-600"
-              >
-                <ShoppingCart className="mr-2 h-5 w-5" />
-                I&apos;m a Vendor
-              </Button>
-            </Link>
-            <Link href="/register?type=supplier">
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-orange-300 cursor-pointer text-orange-600 hover:bg-orange-50 bg-transparent"
-              >
-                <Users className="mr-2 h-5 w-5" />
-                I&apos;m a Supplier
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-16 px-4 bg-white">
-        <div className="container mx-auto">
-          <h3 className="text-3xl font-bold text-center mb-12">Core Features</h3>
-
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
-            {/* Vendor Features */}
-            <Card className="border-orange-200">
-              <CardHeader>
-                <CardTitle className="flex items-center text-orange-600">
-                  <ShoppingCart className="mr-2 h-6 w-6" />
-                  For Street Food Vendors
-                </CardTitle>
-                <CardDescription>Everything you need to source raw materials efficiently</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-orange-500 rounded-full mt-2"></div>
-                  <div>
-                    <h4 className="font-semibold">Smart Shopping Lists</h4>
-                    <p className="text-sm text-gray-600">Create daily needs list (tomatoes, onions, spices)</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-orange-500 rounded-full mt-2"></div>
-                  <div>
-                    <h4 className="font-semibold">Best Supplier Suggestions</h4>
-                    <p className="text-sm text-gray-600">Get recommendations based on price + distance</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-orange-500 rounded-full mt-2"></div>
-                  <div>
-                    <h4 className="font-semibold">AI Chatbot Assistant</h4>
-                    <p className="text-sm text-gray-600">Ask &ldquo;Where can I get cheapest potatoes near me?&rdquo;</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-orange-500 rounded-full mt-2"></div>
-                  <div>
-                    <h4 className="font-semibold">Easy Ordering</h4>
-                    <p className="text-sm text-gray-600">Compare prices, select suppliers, place orders</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Supplier Features */}
-            <Card className="border-red-200">
-              <CardHeader>
-                <CardTitle className="flex items-center text-red-600">
-                  <Users className="mr-2 h-6 w-6" />
-                  For Suppliers
-                </CardTitle>
-                <CardDescription>Manage your inventory and connect with vendors</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
-                  <div>
-                    <h4 className="font-semibold">Daily Inventory Upload</h4>
-                    <p className="text-sm text-gray-600">List what you&apos;re selling today with prices</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
-                  <div>
-                    <h4 className="font-semibold">Order Management</h4>
-                    <p className="text-sm text-gray-600">Receive and manage vendor order requests</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
-                  <div>
-                    <h4 className="font-semibold">Accept/Reject Orders</h4>
-                    <p className="text-sm text-gray-600">Full control over which orders to fulfill</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-red-500 rounded-full mt-2"></div>
-                  <div>
-                    <h4 className="font-semibold">Customer Ratings</h4>
-                    <p className="text-sm text-gray-600">Build reputation through vendor feedback</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Bonus Features */}
-          <div className="grid md:grid-cols-3 gap-6">
-            <Card className="text-center">
-              <CardContent className="pt-6">
-                <Smartphone className="h-12 w-12 text-orange-500 mx-auto mb-4" />
-                <h4 className="font-semibold mb-2">Mobile Optimized</h4>
-                <p className="text-sm text-gray-600">Works perfectly on all mobile devices</p>
-              </CardContent>
-            </Card>
-            <Card className="text-center">
-              <CardContent className="pt-6">
-                <Star className="h-12 w-12 text-orange-500 mx-auto mb-4" />
-                <h4 className="font-semibold mb-2">Rating System</h4>
-                <p className="text-sm text-gray-600">Rate suppliers and build trust</p>
-              </CardContent>
-            </Card>
-            <Card className="text-center">
-              <CardContent className="pt-6">
-                <MapPin className="h-12 w-12 text-orange-500 mx-auto mb-4" />
-                <h4 className="font-semibold mb-2">Location Based</h4>
-                <p className="text-sm text-gray-600">Find nearest suppliers with maps</p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* AI Feature Highlight */}
-      <section className="py-16 px-4 bg-gradient-to-r from-orange-500 to-red-500 text-white">
-        <div className="container mx-auto text-center">
-          <MessageCircle className="h-16 w-16 mx-auto mb-6" />
-          <h3 className="text-3xl font-bold mb-4">🤖 AI-Powered Assistant</h3>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Our smart chatbot helps vendors find the best deals, speaks in local language, and optimizes for both cost
-            and distance.
-          </p>
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 max-w-md mx-auto">
-            <p className="text-lg font-medium mb-2">&ldquo;Where can I get cheapest potatoes near me?&rdquo;</p>
-            <p className="text-sm opacity-90">Get instant recommendations with prices and locations</p>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4 bg-white">
-        <div className="container mx-auto text-center">
-          <h3 className="text-3xl font-bold mb-4">Ready to Transform Your Food Business?</h3>
-          <p className="text-xl text-gray-600 mb-8">Join thousands of vendors and suppliers already using RasoiChain</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/register?type=vendor">
-              <Button
-                size="lg"
-                className="bg-gradient-to-r cursor-pointer from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600"
+                className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 Start as Vendor
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
             <Link href="/register?type=supplier">
               <Button
                 size="lg"
-                variant="outline"
-                className="cursor-pointer border-orange-300 text-orange-600 hover:bg-orange-50 bg-transparent"
+                className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white px-8 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
               >
-                Start as Supplier
+                Join as Supplier
+                <Users className="ml-2 h-5 w-5" />
               </Button>
             </Link>
+          </div>
+
+          {/* Location Info */}
+          <div className="flex items-center justify-center text-gray-300">
+            <MapPin className="h-5 w-5 mr-2" />
+            <span className="text-lg">
+              Available across major Indian cities
+            </span>
+          </div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-bounce"></div>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-8 px-4">
-        <div className="container mx-auto text-center">
-          <div className="flex items-center justify-center space-x-2 mb-4">
-            <div className="w-6 h-6 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xs">R</span>
+      {/* Features Preview Section */}
+      <section className="py-20 bg-gradient-to-br from-orange-50 to-red-50">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            Why Choose RasoiChain?
+          </h2>
+          <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
+            Experience the future of food supply chain management with our
+            AI-powered platform
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-white text-2xl">🤖</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
+                AI-Powered Matching
+              </h3>
+              <p className="text-gray-600">
+                Smart algorithms connect you with the best suppliers based on
+                price, quality, and location
+              </p>
             </div>
-            <span className="text-xl font-bold">RasoiChain</span>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-white text-2xl">💰</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
+                Best Prices
+              </h3>
+              <p className="text-gray-600">
+                Compare prices across multiple suppliers and save up to 30% on
+                your raw material costs
+              </p>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-white text-2xl">⚡</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
+                Quick Delivery
+              </h3>
+              <p className="text-gray-600">
+                Get your ingredients delivered fast with our network of trusted
+                local suppliers
+              </p>
+            </div>
           </div>
-          <p className="text-gray-400">Connecting street food vendors with suppliers across India</p>
         </div>
-      </footer>
+      </section>
     </div>
-  )
+  );
 }
