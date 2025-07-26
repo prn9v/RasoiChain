@@ -138,7 +138,7 @@ export default function VendorDashboard() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-br from-white/95 to-orange-50/95"></div>
                 </div>
-                <Card className="border-0 shadow-xl bg-white/90 backdrop-blur-sm relative z-10">
+                <Card className="border-2 shadow-xl bg-white/90 backdrop-blur-sm relative z-10">
                   <CardHeader className="pb-4">
                     <div className="flex items-center justify-between">
                       <div>
@@ -233,7 +233,7 @@ export default function VendorDashboard() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-br from-white/95 to-orange-50/95"></div>
                     </div>
-                    <Card className="border-0 shadow-xl bg-white/90 backdrop-blur-sm relative z-10">
+                    <Card className="border-2 shadow-xl bg-white/90 backdrop-blur-sm relative z-10">
                       <CardContent className="p-6">
                         <div className="flex items-start justify-between mb-6">
                           <div>
@@ -292,7 +292,7 @@ export default function VendorDashboard() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-br from-white/95 to-orange-50/95"></div>
                 </div>
-                <Card className="border-0 shadow-xl bg-white/90 backdrop-blur-sm relative z-10">
+                <Card className="border-2 shadow-xl bg-white/90 backdrop-blur-sm relative z-10">
                   <CardHeader>
                     <CardTitle className="text-xl font-bold text-gray-900">Recent Orders</CardTitle>
                     <CardDescription className="text-gray-600">Track your order status and history</CardDescription>

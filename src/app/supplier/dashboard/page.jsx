@@ -115,11 +115,11 @@ export default function SupplierDashboard() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-yellow-500/20"></div>
               </div>
-              <Card className="border-0 shadow-lg bg-white/90 backdrop-blur-sm relative z-10">
+              <Card className="border-2 shadow-lg bg-white/90 backdrop-blur-sm relative z-10">
                 <CardContent className="p-6">
                   <div className="flex items-center justify-between">
                     <div>
-                      <p className="text-sm font-medium text-gray-600 mb-1">Total Orders</p>
+                      <p className="text-sm font-medium text-gray-600 mb-1 ">Total Orders</p>
                       <p className="text-3xl font-bold text-gray-900">24</p>
                     </div>
                     <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center">
@@ -139,7 +139,7 @@ export default function SupplierDashboard() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/20 to-orange-500/20"></div>
               </div>
-              <Card className="border-0 shadow-lg bg-white/90 backdrop-blur-sm relative z-10">
+              <Card className="border-2 shadow-lg bg-white/90 backdrop-blur-sm relative z-10">
                 <CardContent className="p-6">
                   <div className="flex items-center justify-between">
                     <div>
@@ -163,7 +163,7 @@ export default function SupplierDashboard() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-emerald-500/20"></div>
               </div>
-              <Card className="border-0 shadow-lg bg-white/90 backdrop-blur-sm relative z-10">
+              <Card className="border-2 shadow-lg bg-white/90 backdrop-blur-sm relative z-10">
                 <CardContent className="p-6">
                   <div className="flex items-center justify-between">
                     <div>
@@ -187,7 +187,7 @@ export default function SupplierDashboard() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-indigo-500/20"></div>
               </div>
-              <Card className="border-0 shadow-lg bg-white/90 backdrop-blur-sm relative z-10">
+              <Card className="border-2 shadow-lg bg-white/90 backdrop-blur-sm relative z-10">
                 <CardContent className="p-6">
                   <div className="flex items-center justify-between">
                     <div>
@@ -237,7 +237,7 @@ export default function SupplierDashboard() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-br from-white/95 to-orange-50/95"></div>
                 </div>
-                <Card className="border-0 shadow-xl bg-white/90 backdrop-blur-sm relative z-10">
+                <Card className="border-2 shadow-xl bg-white/90 backdrop-blur-sm relative z-10">
                   <CardHeader className="pb-4">
                     <CardTitle className="text-xl font-bold text-gray-900">Add New Item</CardTitle>
                     <CardDescription className="text-gray-600">Add items you're selling today</CardDescription>
@@ -304,7 +304,7 @@ export default function SupplierDashboard() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-br from-white/95 to-orange-50/95"></div>
                 </div>
-                <Card className="border-0 shadow-xl bg-white/90 backdrop-blur-sm relative z-10">
+                <Card className="border-2 shadow-xl bg-white/90 backdrop-blur-sm relative z-10">
                   <CardHeader>
                     <CardTitle className="text-xl font-bold text-gray-900">Current Inventory</CardTitle>
                     <CardDescription className="text-gray-600">Manage your available items</CardDescription>
@@ -371,7 +371,7 @@ export default function SupplierDashboard() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-br from-white/95 to-orange-50/95"></div>
                 </div>
-                <Card className="border-0 shadow-xl bg-white/90 backdrop-blur-sm relative z-10">
+                <Card className="border-2 shadow-xl bg-white/90 backdrop-blur-sm relative z-10">
                   <CardHeader>
                     <CardTitle className="text-xl font-bold text-gray-900">Order Requests</CardTitle>
                     <CardDescription className="text-gray-600">Manage incoming orders from vendors</CardDescription>
@@ -446,9 +446,9 @@ export default function SupplierDashboard() {
                       alt="Card background"
                       className="w-full h-full object-cover opacity-15"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/95 to-green-50/95"></div>
+                    
                   </div>
-                  <Card className="border-0 shadow-xl bg-white/90 backdrop-blur-sm relative z-10">
+                  <Card className="border-2 shadow-xl bg-white/90 backdrop-blur-sm relative z-10">
                     <CardHeader>
                       <CardTitle className="text-xl font-bold text-gray-900">Sales Overview</CardTitle>
                     </CardHeader>
@@ -462,7 +462,7 @@ export default function SupplierDashboard() {
                           <span className="text-gray-700 font-medium">This Month</span>
                           <span className="text-2xl font-bold text-blue-600">₹45,200</span>
                         </div>
-                        <div className="flex justify-between items-center p-4 bg-white/80 rounded-xl">
+                        <div className="flex justify-between items-center p-4 bg-white/80 rounded-xl ">
                           <span className="text-gray-700 font-medium">Total Orders</span>
                           <span className="text-2xl font-bold text-purple-600">156</span>
                         </div>
@@ -480,7 +480,7 @@ export default function SupplierDashboard() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-br from-white/95 to-blue-50/95"></div>
                   </div>
-                  <Card className="border-0 shadow-xl bg-white/90 backdrop-blur-sm relative z-10">
+                  <Card className="border-2 shadow-xl bg-white/90 backdrop-blur-sm relative z-10">
                     <CardHeader>
                       <CardTitle className="text-xl font-bold text-gray-900">Top Selling Items</CardTitle>
                     </CardHeader>
@@ -507,7 +507,7 @@ export default function SupplierDashboard() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-br from-white/95 to-orange-50/95"></div>
                 </div>
-                <Card className="border-0 shadow-xl bg-white/90 backdrop-blur-sm relative z-10">
+                <Card className="border-2 shadow-xl bg-white/90 backdrop-blur-sm relative z-10">
                   <CardHeader>
                     <CardTitle className="text-xl font-bold text-gray-900">Customer Feedback</CardTitle>
                   </CardHeader>

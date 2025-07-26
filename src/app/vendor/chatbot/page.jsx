@@ -1,12 +1,12 @@
-"use client"
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Badge } from "@/components/ui/badge"
-import { ScrollArea } from "@/components/ui/scroll-area"
-import { MessageCircle, Send, ArrowLeft, Bot, User } from "lucide-react"
-import Link from "next/link"
+"use client";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Badge } from "@/components/ui/badge";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { MessageCircle, Send, ArrowLeft, Bot, User, Sparkles } from "lucide-react";
+import Link from "next/link";
 
 export default function ChatbotPage() {
   const [messages, setMessages] = useState([
@@ -23,33 +23,33 @@ export default function ChatbotPage() {
         "Best spice suppliers in my area",
       ],
     },
-  ])
-  const [inputMessage, setInputMessage] = useState("")
-  const [isTyping, setIsTyping] = useState(false)
+  ]);
+  const [inputMessage, setInputMessage] = useState("");
+  const [isTyping, setIsTyping] = useState(false);
 
   const handleSendMessage = (message) => {
-    if (!message.trim()) return
+    if (!message.trim()) return;
 
     const userMessage = {
       id: Date.now(),
       type: "user",
       content: message,
       timestamp: new Date(),
-    }
+    };
 
-    setMessages((prev) => [...prev, userMessage])
-    setInputMessage("")
-    setIsTyping(true)
+    setMessages((prev) => [...prev, userMessage]);
+    setInputMessage("");
+    setIsTyping(true);
 
     setTimeout(() => {
-      const botResponse = generateBotResponse(message)
-      setMessages((prev) => [...prev, botResponse])
-      setIsTyping(false)
-    }, 1500)
-  }
+      const botResponse = generateBotResponse(message);
+      setMessages((prev) => [...prev, botResponse]);
+      setIsTyping(false);
+    }, 1500);
+  };
 
   const generateBotResponse = (userMessage) => {
-    const lowerMessage = userMessage.toLowerCase()
+    const lowerMessage = userMessage.toLowerCase();
     if (lowerMessage.includes("potato") || lowerMessage.includes("आलू")) {
       return {
         id: Date.now() + 1,
@@ -76,7 +76,7 @@ export default function ChatbotPage() {
           "Find suppliers for onions",
           "What about green vegetables?",
         ],
-      }
+      };
     }
 
     if (lowerMessage.includes("tomato") || lowerMessage.includes("टमाटर")) {
@@ -102,7 +102,7 @@ Best deal: Sunrise Vegetables में सबसे अच्छी quality औ
           "Show delivery options",
           "Check supplier ratings",
         ],
-      }
+      };
     }
 
     if (lowerMessage.includes("onion") || lowerMessage.includes("प्याज")) {
@@ -128,7 +128,7 @@ Best deal: Sunrise Vegetables में सबसे अच्छी quality औ
           "Find other vegetables",
           "Check today's special offers",
         ],
-      }
+      };
     }
 
     return {
@@ -143,172 +143,162 @@ Best deal: Sunrise Vegetables में सबसे अच्छी quality औ
 
 आप क्या खोज रहे हैं?`,
       timestamp: new Date(),
-      suggestions: ["Find cheapest vegetables", "Show nearby suppliers", "Best deals today", "Bulk order discounts"],
-    }
-  }
+      suggestions: [
+        "Find cheapest vegetables",
+        "Show nearby suppliers",
+        "Best deals today",
+        "Bulk order discounts",
+      ],
+    };
+  };
 
   return (
-    <div className="min-h-screen relative overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 z-0">
-        <img src="/images/spice-market-hero.png" alt="Background" className="w-full h-full object-cover opacity-10" />
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-50/95 via-white/90 to-red-50/95"></div>
-      </div>
-
-      <div className="relative z-10">
-        {/* Header */}
-        <header className="bg-white/95 backdrop-blur-sm border-b border-orange-100 sticky top-0 z-50 shadow-sm">
-          <div className="container mx-auto px-6 py-4">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center space-x-4">
-                <Link href="/vendor/dashboard">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="rounded-xl border-gray-300 hover:bg-orange-50 hover:border-orange-300 transition-all duration-200 bg-white/80 backdrop-blur-sm"
-                  >
-                    <ArrowLeft className="mr-2 h-4 w-4" />
-                    Back
-                  </Button>
-                </Link>
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center shadow-lg">
-                    <MessageCircle className="h-5 w-5 text-white" />
-                  </div>
-                  <h1 className="text-2xl font-bold text-gray-900">AI Assistant</h1>
-                  <Badge className="bg-green-100 text-green-800 px-3 py-1 rounded-full font-medium">Online</Badge>
+    <div className="min-h-screen bg-gradient-to-br from-yellow-50 to-white relative overflow-hidden">
+      {/* Header */}
+      <header className="bg-white/95 backdrop-blur-sm border-b border-orange-100 sticky top-0 z-50 shadow-md">
+        <div className="container mx-auto px-6 py-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-4">
+              <Link href="/vendor/dashboard">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="rounded-xl border-gray-300 hover:bg-orange-50 hover:border-orange-300 transition-all duration-200 bg-white/80 backdrop-blur-sm"
+                >
+                  <ArrowLeft className="mr-2 h-4 w-4" />
+                  Back
+                </Button>
+              </Link>
+              <div className="flex items-center space-x-3">
+                <div className="w-10 h-10 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center shadow-md">
+                  <MessageCircle className="h-5 w-5 text-white" />
                 </div>
+                <h1 className="text-2xl font-bold text-gray-900">AI Assistant</h1>
+                <Badge className="bg-green-100 text-green-800 px-3 py-1 rounded-full font-medium">Online</Badge>
               </div>
             </div>
           </div>
-        </header>
+        </div>
+      </header>
 
-        <div className="container mx-auto px-6 py-8 max-w-4xl">
-          <div className="relative overflow-hidden rounded-2xl">
-            <div className="absolute inset-0 z-0">
-              <img
-                src="/images/spice-market-hero.png"
-                alt="Card background"
-                className="w-full h-full object-cover opacity-15"
-              />
-              <div className="absolute inset-0 bg-gradient-to-br from-white/95 to-orange-50/95"></div>
-            </div>
-            <Card className="h-[calc(100vh-200px)] flex flex-col border-0 shadow-2xl bg-white/90 backdrop-blur-sm relative z-10">
-              <CardHeader className="border-b border-gray-200 bg-white/80 backdrop-blur-sm">
-                <CardTitle className="flex items-center">
-                  <Bot className="mr-3 h-6 w-6 text-orange-500" />
-                  <div>
-                    <span className="text-xl font-bold text-gray-900">RasoiChain AI Assistant</span>
-                    <p className="text-sm text-gray-600 font-normal mt-1">
-                      Ask me anything about suppliers, prices, and locations in Hindi or English
-                    </p>
-                  </div>
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="flex-1 flex flex-col p-0">
-                <ScrollArea className="flex-1 p-6">
-                  <div className="space-y-6">
-                    {messages.map((message) => (
-                      <div
-                        key={message.id}
-                        className={`flex ${message.type === "user" ? "justify-end" : "justify-start"}`}
-                      >
-                        <div
-                          className={`flex items-start space-x-3 max-w-[85%] ${
-                            message.type === "user" ? "flex-row-reverse space-x-reverse" : ""
-                          }`}
-                        >
-                          <div
-                            className={`w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 shadow-md ${
-                              message.type === "user"
-                                ? "bg-gradient-to-r from-orange-500 to-red-500 text-white"
-                                : "bg-white border-2 border-gray-200 text-gray-600"
-                            }`}
-                          >
-                            {message.type === "user" ? <User className="h-5 w-5" /> : <Bot className="h-5 w-5" />}
-                          </div>
-                          <div
-                            className={`rounded-2xl p-4 max-w-full break-words shadow-lg ${
-                              message.type === "user"
-                                ? "bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-br-md"
-                                : "bg-white border border-gray-200 text-gray-900 rounded-bl-md"
-                            }`}
-                          >
-                            <p className="whitespace-pre-wrap leading-relaxed">{message.content}</p>
-                            <p className="text-xs opacity-70 mt-2">{message.timestamp.toLocaleTimeString()}</p>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-
-                    {messages.length > 0 && messages[messages.length - 1].suggestions && (
-                      <div className="flex flex-wrap gap-2 mt-6 justify-start">
-                        {messages[messages.length - 1].suggestions.map((suggestion, index) => (
-                          <Button
-                            key={index}
-                            variant="outline"
-                            size="sm"
-                            onClick={() => handleSendMessage(suggestion)}
-                            className="text-sm rounded-full border-orange-200 hover:bg-orange-50 hover:border-orange-300 transition-all duration-200 bg-white/80 backdrop-blur-sm"
-                          >
-                            {suggestion}
-                          </Button>
-                        ))}
-                      </div>
-                    )}
-
-                    {isTyping && (
-                      <div className="flex justify-start">
-                        <div className="flex items-start space-x-3">
-                          <div className="w-10 h-10 rounded-full bg-white border-2 border-gray-200 flex items-center justify-center shadow-md">
-                            <Bot className="h-5 w-5 text-gray-600" />
-                          </div>
-                          <div className="bg-white border border-gray-200 rounded-2xl rounded-bl-md p-4 shadow-lg">
-                            <div className="flex space-x-1">
-                              <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                              <div
-                                className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
-                                style={{ animationDelay: "0.1s" }}
-                              ></div>
-                              <div
-                                className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
-                                style={{ animationDelay: "0.2s" }}
-                              ></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                </ScrollArea>
-
-                <div className="border-t border-gray-200 p-6 bg-white/80 backdrop-blur-sm">
-                  <div className="flex space-x-3">
-                    <Input
-                      value={inputMessage}
-                      onChange={(e) => setInputMessage(e.target.value)}
-                      placeholder="Ask me anything... (Hindi/English both supported)"
-                      onKeyPress={(e) => e.key === "Enter" && handleSendMessage(inputMessage)}
-                      className="flex-1 h-12 rounded-xl border-gray-200 focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-white/90 backdrop-blur-sm"
-                      disabled={isTyping}
-                    />
-                    <Button
-                      onClick={() => handleSendMessage(inputMessage)}
-                      className="h-12 px-6 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200"
-                      disabled={!inputMessage.trim() || isTyping}
-                    >
-                      <Send className="h-5 w-5" />
-                    </Button>
-                  </div>
-                  <p className="text-xs text-gray-500 mt-3 text-center">
-                    💡 Try: "सबसे सस्ते आलू कहाँ मिलेंगे?" or "Where can I get cheapest potatoes near me?"
+      <div className="container mx-auto px-6 py-8 max-w-4xl">
+        <div className="relative overflow-hidden rounded-2xl shadow-lg">
+          <div className="absolute inset-0 z-0 bg-gradient-to-br from-white/90 to-yellow-50/90"></div>
+          <Card className="flex flex-col min-h-[calc(100vh-200px)] border-2 border-orange-200 bg-white/95 backdrop-blur-sm relative z-10">
+            <CardHeader className="border-b border-orange-100 bg-white/90 backdrop-blur-sm">
+              <CardTitle className="flex items-center">
+                <Bot className="mr-3 h-6 w-6 text-orange-500" />
+                <div>
+                  <span className="text-xl font-bold text-gray-900">RasoiChain AI Assistant</span>
+                  <p className="text-sm text-gray-600 font-normal mt-1">
+                    Ask me anything about suppliers, prices, and locations in Hindi or English
                   </p>
                 </div>
-              </CardContent>
-            </Card>
-          </div>
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="flex-1 flex flex-col p-0">
+              <ScrollArea className="flex-1 p-6 bg-white/90 rounded-xl shadow-inner max-h-[calc(100vh-300px)]">
+                <div className="space-y-6">
+                  {messages.map((message) => (
+                    <div
+                      key={message.id}
+                      className={`flex ${message.type === "user" ? "justify-end" : "justify-start"}`}
+                    >
+                      <div
+                        className={`flex items-start space-x-3 max-w-[85%] ${
+                          message.type === "user" ? "flex-row-reverse space-x-reverse" : ""
+                        }`}
+                      >
+                        <div
+                          className={`w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 shadow-md ${
+                            message.type === "user"
+                              ? "bg-gradient-to-r from-orange-500 to-red-500 text-white"
+                              : "bg-gray-100 border border-gray-300 text-gray-600"
+                          }`}
+                        >
+                          {message.type === "user" ? <User className="h-5 w-5" /> : <Bot className="h-5 w-5" />}
+                        </div>
+                        <div
+                          className={`rounded-xl p-4 max-w-full break-words shadow-md ${
+                            message.type === "user"
+                              ? "bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-br-none"
+                              : "bg-gray-50 border border-gray-200 text-gray-900 rounded-bl-none"
+                          }`}
+                        >
+                          <p className="whitespace-pre-wrap leading-relaxed">{message.content}</p>
+                          <p className="text-xs opacity-70 mt-2">{message.timestamp.toLocaleTimeString()}</p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+
+                  {messages.length > 0 && messages[messages.length - 1].suggestions && (
+                    <div className="flex flex-wrap gap-2 mt-6 justify-start">
+                      {messages[messages.length - 1].suggestions.map((suggestion, index) => (
+                        <Button
+                          key={index}
+                          variant="outline"
+                          size="sm"
+                          onClick={() => handleSendMessage(suggestion)}
+                          className="text-sm rounded-full border-orange-200 hover:bg-orange-50 hover:border-orange-300 transition-all duration-200 bg-white/90 backdrop-blur-sm"
+                        >
+                          {suggestion}
+                        </Button>
+                      ))}
+                    </div>
+                  )}
+
+                  {isTyping && (
+                    <div className="flex justify-start">
+                      <div className="flex items-start space-x-3">
+                        <div className="w-10 h-10 rounded-full bg-gray-100 border border-gray-300 flex items-center justify-center shadow-md">
+                          <Bot className="h-5 w-5 text-gray-600" />
+                        </div>
+                        <div className="bg-gray-50 border border-gray-200 rounded-xl rounded-bl-none p-4 shadow-md">
+                          <div className="flex space-x-1">
+                            <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
+                            <div
+                              className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                              style={{ animationDelay: "0.1s" }}
+                            ></div>
+                            <div
+                              className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                              style={{ animationDelay: "0.2s" }}
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </ScrollArea>
+
+              <div className="border-t border-orange-100 p-6 bg-white/90 backdrop-blur-sm">
+                <div className="flex space-x-3">
+                  <Input
+                    value={inputMessage}
+                    onChange={(e) => setInputMessage(e.target.value)}
+                    placeholder="Ask me anything... (Hindi/English both supported)"
+                    onKeyPress={(e) => e.key === "Enter" && handleSendMessage(inputMessage)}
+                    className="flex-1 h-12 rounded-xl border-gray-200 focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-white/95 backdrop-blur-sm"
+                    disabled={isTyping}
+                  />
+                  <Button
+                    onClick={() => handleSendMessage(inputMessage)}
+                    className="h-12 px-6 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 rounded-xl shadow-md hover:shadow-lg transition-all duration-200"
+                    disabled={!inputMessage.trim() || isTyping}
+                  >
+                    <Send className="h-5 w-5" />
+                  </Button>
+                </div>
+                <p className="text-xs text-gray-500 mt-3 text-center">
+                  💡 Try: "सबसे सस्ते आलू कहाँ मिलेंगे?" or "Where can I get cheapest potatoes near me?"
+                </p>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </div>
-  )
+  );
 }

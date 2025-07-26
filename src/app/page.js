@@ -165,6 +165,156 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Features Section */}
+      <section id="features" className="py-20 bg-gradient-to-br from-yellow-50 to-orange-50">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            Key Features
+          </h2>
+          <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
+            Discover the powerful tools that make RasoiChain stand out.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-white text-2xl">📊</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
+                Real-Time Analytics
+              </h3>
+              <p className="text-gray-600">
+                Track your orders and supplier performance with real-time data and insights.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-white text-2xl">🔒</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
+                Secure Transactions
+              </h3>
+              <p className="text-gray-600">
+                Enjoy safe and secure payment options with end-to-end encryption.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-white text-2xl">💬</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
+                24/7 Support
+              </h3>
+              <p className="text-gray-600">
+                Get round-the-clock customer support to assist with any queries.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works Section */}
+      <section id="how-it-works" className="py-20 bg-gradient-to-br from-orange-50 to-red-50">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            How It Works
+          </h2>
+          <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
+            A simple 3-step process to get you started with RasoiChain.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-white text-2xl">1️⃣</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
+                Sign Up
+              </h3>
+              <p className="text-gray-600">
+                Register as a vendor or supplier in just a few clicks.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-white text-2xl">2️⃣</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
+                Browse & Connect
+              </h3>
+              <p className="text-gray-600">
+                Explore suppliers and connect with the best matches for your needs.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-white text-2xl">3️⃣</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
+                Order & Deliver
+              </h3>
+              <p className="text-gray-600">
+                Place your order and receive high-quality ingredients quickly.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="py-20 bg-gradient-to-br from-yellow-50 to-orange-50">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            About Us
+          </h2>
+          <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
+            Learn more about our mission and the team behind RasoiChain.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-white text-2xl">🎯</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
+                Our Mission
+              </h3>
+              <p className="text-gray-600">
+                To empower street food vendors with affordable and reliable supply chains.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-white text-2xl">👥</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
+                Our Team
+              </h3>
+              <p className="text-gray-600">
+                A dedicated group of tech enthusiasts and food industry experts.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-white text-2xl">🌐</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
+                Our Vision
+              </h3>
+              <p className="text-gray-600">
+                To create a sustainable and efficient food ecosystem across India.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Features Preview Section */}
       <section className="py-20 bg-gradient-to-br from-orange-50 to-red-50">
         <div className="container mx-auto px-6 text-center">
