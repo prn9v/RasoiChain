@@ -82,16 +82,8 @@ export default function VendorDashboard() {
                 <h1 className="text-2xl font-bold text-gray-900">RasoiChain</h1>
                 <Badge className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full font-medium">Vendor</Badge>
               </div>
-              <div className="flex items-center space-x-4">
-                <Link href="/vendor/chatbot">
-                  <Button className="cursor-pointer bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-200">
-                    <MessageCircle className="mr-2 h-4 w-4" />
-                    AI Assistant
-                  </Button>
-                </Link>
-                <div className="text-sm text-gray-600 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full border border-gray-200">
-                  Welcome, <span className="font-semibold text-gray-900">Raj Kumar</span>
-                </div>
+              <div className="text-sm text-gray-600 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full border border-gray-200">
+                Welcome, <span className="font-semibold text-gray-900">Raj Kumar</span>
               </div>
             </div>
           </div>
@@ -361,6 +353,16 @@ export default function VendorDashboard() {
           </Tabs>
         </div>
       </div>
+
+      {/* Floating AI Assistant Button */}
+      <Link href="/vendor/chatbot">
+        <Button className="fixed bottom-6 right-6 z-50 w-16 h-16 rounded-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-110 cursor-pointer group">
+          <MessageCircle className="h-6 w-6" />
+          <div className="absolute -top-12 right-0 bg-gray-900 text-white text-sm px-3 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
+            AI Assistant
+          </div>
+        </Button>
+      </Link>
     </div>
   )
 }
